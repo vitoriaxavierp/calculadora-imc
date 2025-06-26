@@ -8,10 +8,12 @@ def home():
     altura = None
     indice = None
     mensagem = None
+    nome = None
     
     if request.method == 'POST':
         peso_str = request.form['formPeso']
         altura_str = request.form['formAltura']
+        nome = request.form['formNome']
 
         peso_float = 0.0
         altura_float = 0.0
@@ -34,16 +36,10 @@ def home():
                 mensagem = "Erro: A altura precisa ser maior que zero."
                 indice = None
         
-        return render_template(
-            'index.html',
-            peso=peso_str,
-            altura=altura_str,
-            indice=indice,
-            mensagem=mensagem
-        )
+        return render_template('index.html',peso=peso_str,altura=altura_str,indice=indice,mensagem=mensagem, nome=nome)
             
     else:
-        return render_template('index.html', peso=peso, altura=altura, indice=indice, mensagem=mensagem)
+        return render_template('index.html', peso=peso, altura=altura, indice=indice, mensagem=mensagem, nome=nome)
 
 if __name__ == '__main__':
     app.run(debug=True)
