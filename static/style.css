@@ -39,16 +39,26 @@ h2 {
 }
 
 .input-group input[type="number"] {
-    width: calc(100% - 20px); /* Ajusta a largura considerando o padding */
+    width: calc(100% - 20px); 
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em;
-    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    box-sizing: border-box;
 }
 
+.input-group input[type="text"] {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+
 .submit-button {
-    background-color: #4CAF50; /* Verde */
+    background-color: #4CAF50;
     color: white;
     padding: 12px 20px;
     border: none;
